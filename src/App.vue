@@ -43,10 +43,18 @@
         <h2 class="display-2 text-center text-uppercase font-weight-bold mb-3">Momma: Juno</h2>
 
         <v-parallax
+          class="d-none d-lg-block"
           :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
           :src="require('./assets/beach_juno.jpeg')"
         >
         </v-parallax>
+
+        <v-row no-gutters class="d-lg-none">
+          <v-img
+            :src="require('./assets/beach_juno.jpeg')"
+          >
+          </v-img>
+        </v-row>
 
         <div class="py-5"></div>
       </section>
@@ -56,10 +64,18 @@
 
         <v-parallax
           contain
-          :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
+          class="d-none d-lg-block"
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 900"
           :src="require('./assets/mars.jpeg')"
         >
         </v-parallax>
+
+        <v-row no-gutters class="d-lg-none">
+          <v-img
+            :src="require('./assets/mars.jpeg')"
+          >
+          </v-img>
+        </v-row>
       </section>
 
       <section id="puppies" class="grey lighten-3">
