@@ -72,28 +72,32 @@
             <v-divider></v-divider>
           </v-responsive>
 
-          <v-row>
+          <v-row >
             <v-col
-              v-for="({ icon, title, text }, i) in puppies"
+              v-for="({ icon, name, text }, i) in puppies"
               :key="i"
               cols="12"
               md="4"
             >
-              <v-card class="py-12 px-4" color="grey lighten-5" flat>
-                <v-theme-provider light>
-                  <div>
-                    <v-avatar color="primary" size="88">
-                      <v-icon large v-text="icon"></v-icon>
-                    </v-avatar>
-                  </div>
-                </v-theme-provider>
+              <v-card
+                class="mx-auto"
+                color="#26c6da"
+                dark
+                max-width="400"
+              >
+                <v-card-title class="justify-center">
+                  <v-icon
+                    large
+                    left
+                    v-text="icon"
+                  >
+                  </v-icon>
+                  <span class="title font-weight-light" v-text="name"></span>
+                </v-card-title>
 
-                <v-card-title
-                  class="justify-center font-weight-black text-uppercase"
-                  v-text="title"
-                ></v-card-title>
-
-                <v-card-text class="subtitle-1" v-text="text"> </v-card-text>
+                <v-card-text v-if="text.length > 0" class="headline font-weight-bold"
+                    v-text="text">
+                </v-card-text>
               </v-card>
             </v-col>
           </v-row>
@@ -119,7 +123,7 @@
           <v-theme-provider light>
             <v-row>
               <v-col cols="12">
-                <v-card class="py-12 px-4" color="grey lighten-5" flat>
+                <v-card class="py-12 px-4" color="#26c6da" dark>
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
                   >Email (preferred)</v-card-title>
@@ -128,7 +132,7 @@
               </v-col>
 
               <v-col cols="12">
-                <v-card class="py-12 px-4" color="grey lighten-5" flat>
+                <v-card class="py-12 px-4" color="#26c6da" dark>
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
                   >Phone</v-card-title>
@@ -137,7 +141,7 @@
               </v-col>
 
               <v-col cols="12">
-                <v-card class="py-12 px-4" color="grey lighten-5" flat>
+                <v-card class="py-12 px-4" color="#26c6da" dark>
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
                   > <v-img
@@ -159,7 +163,7 @@
 
     <v-footer class="justify-center grey lighten-3" height="100">
       <div
-        class="title font-weight-light grey--text text--lighten-1 text-center"
+        class="blue-text title font-weight-light text--lighten-1 text-center"
       >
         &copy; {{ new Date().getFullYear() }} Aussies by the Sea
       </div>
@@ -177,32 +181,32 @@ export default {
       puppies: [
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
         {
           icon: 'mdi-dog',
-          title: 'Coming Soon!',
+          name: 'Coming Soon!',
           text: '',
         },
       ],
@@ -210,3 +214,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+ .blue-text {
+   color: #26c6da;
+ }
+</style>
