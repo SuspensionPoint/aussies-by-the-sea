@@ -27,13 +27,39 @@
             class="mx-auto title font-weight-light mb-8"
             max-width="720"
           >
-            Come back soon!
+            Australian Shepherd breeder located in Navarre, Fl.
+            <br>
+            We're expecting a large litter of 7-10 puppies coming <i>very</i> soon.
+            Check back often!
           </v-responsive>
 
           <div></div>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-5"></div>
+      </section>
+
+      <section id="juno">
+        <h2 class="display-2 text-center text-uppercase font-weight-bold mb-3">Momma: Juno</h2>
+
+        <v-parallax
+          :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
+          :src="require('./assets/beach_juno.jpeg')"
+        >
+        </v-parallax>
+
+        <div class="py-5"></div>
+      </section>
+
+      <section id="mars">
+        <h2 class="display-2 text-center text-uppercase font-weight-bold mb-3">Daddio: Mars</h2>
+
+        <v-parallax
+          contain
+          :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
+          :src="require('./assets/mars.jpeg')"
+        >
+        </v-parallax>
       </section>
 
       <section id="puppies" class="grey lighten-3">
@@ -76,14 +102,6 @@
         <div class="py-12"></div>
       </section>
 
-      <section id="stats">
-        <v-parallax
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-          src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-        >
-        </v-parallax>
-      </section>
-
       <v-sheet id="contact"  tag="section" >
         <div class="py-12"></div>
 
@@ -104,8 +122,8 @@
                 <v-card class="py-12 px-4" color="grey lighten-5" flat>
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
-                  >Phone</v-card-title>
-                  <v-card-text class="text-center">850-313-1092</v-card-text>
+                  >Email (preferred)</v-card-title>
+                  <v-card-text class="text-center">aussiesbythesea@gmail.com</v-card-text>
                 </v-card>
               </v-col>
 
@@ -113,8 +131,8 @@
                 <v-card class="py-12 px-4" color="grey lighten-5" flat>
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
-                  >Email (preferred)</v-card-title>
-                  <v-card-text class="text-center">aussiesbythesea@gmail.com</v-card-text>
+                  >Phone</v-card-title>
+                  <v-card-text class="text-center">850-313-1092</v-card-text>
                 </v-card>
               </v-col>
 
@@ -143,8 +161,7 @@
       <div
         class="title font-weight-light grey--text text--lighten-1 text-center"
       >
-        &copy; {{ new Date().getFullYear() }} — Vuetify, LLC — Made with 💜 by
-        John Leider
+        &copy; {{ new Date().getFullYear() }} Aussies by the Sea
       </div>
     </v-footer>
   </v-app>
