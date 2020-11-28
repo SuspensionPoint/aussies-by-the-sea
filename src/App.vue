@@ -90,17 +90,24 @@
 
           <v-row >
             <v-col
-              v-for="({ icon, name, text }, i) in puppies"
+              v-for="({ icon, name, coat, sex, weights, photos }, i) in puppies"
               :key="i"
               cols="12"
               md="4"
             >
               <v-card
-                class="mx-auto"
+                class="mx-auto pa-3"
                 color="#26c6da"
                 dark
                 max-width="400"
               >
+                <div v-if="photos.length > 0 && photos[0]" class="justify-center">
+                  <v-img
+                    :src="require('./assets/puppies/partial_collar.jpg')"
+                  >
+                  </v-img>
+                </div>
+
                 <v-card-title class="justify-center">
                   <v-icon
                     large
@@ -108,12 +115,25 @@
                     v-text="icon"
                   >
                   </v-icon>
-                  <span class="title font-weight-light" v-text="name"></span>
+                  <h2 class="title font-weight-bold" v-text="name"></h2>
                 </v-card-title>
 
-                <v-card-text v-if="text.length > 0" class="headline font-weight-bold"
-                    v-text="text">
-                </v-card-text>
+                <div class="text-start">
+                  <h4>Sex: <span class="font-weight-light" v-text="sex"></span> </h4>
+                </div>
+
+                <div class="text-start">
+                  <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
+                </div>
+
+                <div class="text-start">
+                  <h4>
+                    Current Weight:
+                    <span class="font-weight-light"
+                      v-text="`${weights[weights.length-1].weight} oz`">
+                    </span>
+                  </h4>
+                </div>
               </v-card>
             </v-col>
           </v-row>
@@ -188,6 +208,8 @@
 </template>
 
 <script>
+import * as moment from 'moment/moment';
+
 export default {
   name: 'App',
 
@@ -197,33 +219,123 @@ export default {
       puppies: [
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Cornbread',
+          coat: 'Red Tri w/ partial collar',
+          sex: 'Male',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.62,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 14,
+            },
+          ],
+          photos: ['./assets/puppies/partial_collar.jpg'],
         },
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Idk',
+          coat: 'Red Merle',
+          sex: 'Male',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 15.7,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 16.5,
+            },
+          ],
+          photos: [],
         },
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Turkey',
+          coat: 'Red Tri w/ neck dot',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 12.84,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 12.84,
+            },
+          ],
+          photos: [],
         },
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Idk',
+          coat: 'Red Merle',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 12.7,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 12.7,
+            },
+          ],
+          photos: [],
         },
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Cranberry Sauce',
+          coat: 'Red Tri w/ Full Collar & White Forehead',
+          sex: 'Male',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.97,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 15,
+            },
+          ],
+          weight: [13.97, 15],
+          photos: [],
         },
         {
           icon: 'mdi-dog',
-          name: 'Coming Soon!',
-          text: '',
+          name: 'Pecan Pie',
+          coat: 'Red Tri w/ Long Neck Stripe',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 11.2,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 11.7,
+            },
+          ],
+          photos: [],
+        },
+        {
+          icon: 'mdi-dog',
+          name: 'Gravy',
+          coat: 'Red Tri w/ Full Collar',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.9,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 13.76,
+            },
+          ],
+          photos: [],
         },
       ],
     };
