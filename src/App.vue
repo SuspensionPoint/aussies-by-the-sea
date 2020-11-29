@@ -88,7 +88,7 @@
             <v-divider></v-divider>
           </v-responsive>
 
-          <v-row >
+          <v-row class="mb-12">
             <v-col
               v-for="({ icon, name, coat, sex, weights, photos }, i) in puppies"
               :key="i"
@@ -101,9 +101,9 @@
                 dark
                 max-width="400"
               >
-                <div v-if="photos.length > 0 && photos[0]" class="justify-center">
+                <div v-if="photos.length > 0" class="justify-center">
                   <v-img
-                    :src="require('./assets/puppies/partial_collar.jpg')"
+                    :src="photos[0]"
                   >
                   </v-img>
                 </div>
@@ -137,6 +137,12 @@
               </v-card>
             </v-col>
           </v-row>
+
+          <v-img
+            :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
+            :src="require('./assets/puppies/momma-and-pups.jpg')"
+          >
+          </v-img>
         </v-container>
 
         <div class="py-12"></div>
@@ -209,6 +215,13 @@
 
 <script>
 import * as moment from 'moment/moment';
+import MerleMale from './assets/puppies/merle-male.jpg';
+import MerleFemale from './assets/puppies/merle-female.jpg';
+import RedTriCollarSmall from './assets/puppies/red-tri-collar-small.jpg';
+import RedTriCollarForehead from './assets/puppies/red-tri-collar-forehead.jpg';
+import RedTriStripe from './assets/puppies/red-tri-stripe.jpg';
+import RedTriDot from './assets/puppies/red-tri-dot.jpg';
+import RedTriPartialCollar from './assets/puppies/red-tri-partial-collar.jpg';
 
 export default {
   name: 'App',
@@ -219,24 +232,7 @@ export default {
       puppies: [
         {
           icon: 'mdi-dog',
-          name: 'Cornbread',
-          coat: 'Red Tri w/ partial collar',
-          sex: 'Male',
-          weights: [
-            {
-              date: moment('2020-11-26T20:00:00Z').toDate(),
-              weight: 13.62,
-            },
-            {
-              date: moment('2020-11-27T11:30:00Z').toDate(),
-              weight: 14,
-            },
-          ],
-          photos: ['./assets/puppies/partial_collar.jpg'],
-        },
-        {
-          icon: 'mdi-dog',
-          name: 'Idk',
+          name: 'Mashed Potatoes',
           coat: 'Red Merle',
           sex: 'Male',
           weights: [
@@ -249,28 +245,11 @@ export default {
               weight: 16.5,
             },
           ],
-          photos: [],
+          photos: [MerleMale],
         },
         {
           icon: 'mdi-dog',
-          name: 'Turkey',
-          coat: 'Red Tri w/ neck dot',
-          sex: 'Female',
-          weights: [
-            {
-              date: moment('2020-11-26T20:00:00Z').toDate(),
-              weight: 12.84,
-            },
-            {
-              date: moment('2020-11-27T11:30:00Z').toDate(),
-              weight: 12.84,
-            },
-          ],
-          photos: [],
-        },
-        {
-          icon: 'mdi-dog',
-          name: 'Idk',
+          name: 'Coquito',
           coat: 'Red Merle',
           sex: 'Female',
           weights: [
@@ -283,11 +262,11 @@ export default {
               weight: 12.7,
             },
           ],
-          photos: [],
+          photos: [MerleFemale],
         },
         {
           icon: 'mdi-dog',
-          name: 'Cranberry Sauce',
+          name: 'Wishbone',
           coat: 'Red Tri w/ Full Collar & White Forehead',
           sex: 'Male',
           weights: [
@@ -301,11 +280,62 @@ export default {
             },
           ],
           weight: [13.97, 15],
-          photos: [],
+          photos: [RedTriCollarForehead],
         },
         {
           icon: 'mdi-dog',
-          name: 'Pecan Pie',
+          name: 'Pumpkin Pie',
+          coat: 'Red Tri w/ Thin Full Collar',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.9,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 13.76,
+            },
+          ],
+          photos: [RedTriCollarSmall],
+        },
+        {
+          icon: 'mdi-dog',
+          name: 'Ham',
+          coat: 'Red Tri w/ Partial Collar',
+          sex: 'Male',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.62,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 14,
+            },
+          ],
+          photos: [RedTriPartialCollar],
+        },
+        {
+          icon: 'mdi-dog',
+          name: 'Gravy',
+          coat: 'Red Tri w/ neck dot',
+          sex: 'Female',
+          weights: [
+            {
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 12.84,
+            },
+            {
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 12.84,
+            },
+          ],
+          photos: [RedTriDot],
+        },
+        {
+          icon: 'mdi-dog',
+          name: 'Biscuit',
           coat: 'Red Tri w/ Long Neck Stripe',
           sex: 'Female',
           weights: [
@@ -318,24 +348,7 @@ export default {
               weight: 11.7,
             },
           ],
-          photos: [],
-        },
-        {
-          icon: 'mdi-dog',
-          name: 'Gravy',
-          coat: 'Red Tri w/ Full Collar',
-          sex: 'Female',
-          weights: [
-            {
-              date: moment('2020-11-26T20:00:00Z').toDate(),
-              weight: 13.9,
-            },
-            {
-              date: moment('2020-11-27T11:30:00Z').toDate(),
-              weight: 13.76,
-            },
-          ],
-          photos: [],
+          photos: [RedTriStripe],
         },
       ],
     };
