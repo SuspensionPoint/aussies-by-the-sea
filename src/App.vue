@@ -29,8 +29,13 @@
           >
             Australian Shepherd breeder located in Navarre, Fl.
             <br>
-            We're expecting a large litter of 7-10 puppies coming <i>very</i> soon.
-            Check back often!
+            <!-- eslint-disable max-len -->
+            On Thanksgiving Day, Nov. 26th, 2020, our female Australian Shepherd gave birth to her first litter.
+            She had 7 very healthy puppies!
+
+            There are currently 6/7 spoken for.
+
+            Check back often to see their progress!
           </v-responsive>
 
           <div></div>
@@ -90,7 +95,7 @@
 
           <v-row class="mb-12">
             <v-col
-              v-for="({ icon, name, coat, sex, weights, photos }, i) in puppies"
+              v-for="({ icon, name, coat, sex, spokenFor, weights, photos }, i) in puppies"
               :key="i"
               cols="12"
               md="4"
@@ -124,6 +129,13 @@
 
                 <div class="text-start">
                   <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
+                </div>
+
+                <div class="text-start">
+                  <h4>Spoken For?:
+                    <span v-if="spokenFor" class="font-weight-light">Yes!</span>
+                    <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
+                  </h4>
                 </div>
 
                 <div class="text-start">
@@ -235,6 +247,7 @@ export default {
           name: 'Mashed Potatoes',
           coat: 'Red Merle',
           sex: 'Male',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -252,6 +265,7 @@ export default {
           name: 'Coquito',
           coat: 'Red Merle',
           sex: 'Female',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -269,6 +283,7 @@ export default {
           name: 'Wishbone',
           coat: 'Red Tri w/ Full Collar & White Forehead',
           sex: 'Male',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -284,9 +299,10 @@ export default {
         },
         {
           icon: 'mdi-dog',
-          name: 'Pumpkin Pie',
+          name: 'Hazel',
           coat: 'Red Tri w/ Thin Full Collar',
           sex: 'Female',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -304,6 +320,7 @@ export default {
           name: 'Ham',
           coat: 'Red Tri w/ Partial Collar',
           sex: 'Male',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -321,6 +338,7 @@ export default {
           name: 'Gravy',
           coat: 'Red Tri w/ neck dot',
           sex: 'Female',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -338,6 +356,7 @@ export default {
           name: 'Biscuit',
           coat: 'Red Tri w/ Long Neck Stripe',
           sex: 'Female',
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
