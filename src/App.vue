@@ -100,121 +100,61 @@
               cols="12"
               md="4"
             >
-              <!-- <Confetti v-if="spokenFor">
-                <v-card
-                  class="mx-auto pa-3"
-                  :color="spokenFor ? '#26c6da' : '#26c6da'"
-                  dark
-                  max-width="400"
-                >
-                  <div v-if="photos.length > 0" class="justify-center">
-                    <v-img
-                      :src="photos[0]"
-                    >
-                    </v-img>
-                  </div>
+              <v-card
+                class="mx-auto pa-3"
+                :color="spokenFor ? '#26c6da' : '#26c6da'"
+                dark
+                max-width="400"
+              >
+                <div v-if="photos.length > 0" class="justify-center">
+                  <v-img
+                    :src="photos[0]"
+                  >
+                  </v-img>
+                </div>
 
-                  <v-card-title class="justify-center">
-                    <v-icon
-                      large
-                      left
-                      v-text="icon"
-                    >
-                    </v-icon>
-                    <h2 class="title font-weight-bold" v-text="name"></h2>
-                  </v-card-title>
+                <v-card-title class="justify-center">
+                  <v-icon
+                    large
+                    left
+                    v-text="icon"
+                  >
+                  </v-icon>
+                  <h2 class="title font-weight-bold" v-text="name"></h2>
+                </v-card-title>
 
-                  <div class="text-start">
-                    <h4>Sex: <span class="font-weight-light" v-text="sex"></span> </h4>
-                  </div>
+                <div class="text-start">
+                  <h4>Sex: <span class="font-weight-light" v-text="sex"></span> </h4>
+                </div>
 
-                  <div class="text-start">
-                    <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
-                  </div>
+                <div class="text-start">
+                  <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
+                </div>
 
-                  <div class="text-start">
-                    <h4>Spoken For?:
-                      <span v-if="spokenFor" class="font-weight-light">
-                        Yes! This
-                        <span v-if="sex === 'Male'">boy</span>
-                        <span v-else>girl</span>
-                        found
-                        <span v-if="sex === 'Male'">his</span>
-                        <span v-else>her</span>
-                        forever home. 🎉
-                      </span>
-                      <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
-                    </h4>
-                  </div>
+                <div class="text-start">
+                  <h4>Spoken For?:
+                    <span v-if="spokenFor" class="font-weight-light">
+                      Yes! This
+                      <span v-if="sex === 'Male'">boy</span>
+                      <span v-else>girl</span>
+                      found
+                      <span v-if="sex === 'Male'">his</span>
+                      <span v-else>her</span>
+                      forever home. 🎉
+                    </span>
+                    <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
+                  </h4>
+                </div>
 
-                  <div class="text-start">
-                    <h4>
-                      Current Weight:
-                      <span class="font-weight-light"
-                        v-text="`${weights[weights.length-1].weight} oz`">
-                      </span>
-                    </h4>
-                  </div>
-                </v-card>
-              </Confetti> -->
-
-              <Confetti>
-                <v-card
-                  class="mx-auto pa-3"
-                  :color="spokenFor ? '#26c6da' : '#26c6da'"
-                  dark
-                  max-width="400"
-                >
-                  <div v-if="photos.length > 0" class="justify-center">
-                    <v-img
-                      :src="photos[0]"
-                    >
-                    </v-img>
-                  </div>
-
-                  <v-card-title class="justify-center">
-                    <v-icon
-                      large
-                      left
-                      v-text="icon"
-                    >
-                    </v-icon>
-                    <h2 class="title font-weight-bold" v-text="name"></h2>
-                  </v-card-title>
-
-                  <div class="text-start">
-                    <h4>Sex: <span class="font-weight-light" v-text="sex"></span> </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>Spoken For?:
-                      <span v-if="spokenFor" class="font-weight-light">
-                        Yes! This
-                        <span v-if="sex === 'Male'">boy</span>
-                        <span v-else>girl</span>
-                        found
-                        <span v-if="sex === 'Male'">his</span>
-                        <span v-else>her</span>
-                        forever home. 🎉
-                      </span>
-                      <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
-                    </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>
-                      Current Weight:
-                      <span class="font-weight-light"
-                        v-text="`${weights[weights.length-1].weight} oz`">
-                      </span>
-                    </h4>
-                  </div>
-                </v-card>
-              </Confetti>
+                <div class="text-start">
+                  <h4>
+                    Current Weight:
+                    <span class="font-weight-light"
+                      v-text="`${weights[weights.length-1].weight} oz`">
+                    </span>
+                  </h4>
+                </div>
+              </v-card>
             </v-col>
           </v-row>
 
@@ -302,8 +242,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import VueConfetti from 'vue-confetti';
 import * as moment from 'moment/moment';
 import MerleMale from './assets/puppies/merle-male.jpg';
 import MerleFemale from './assets/puppies/merle-female.jpg';
@@ -312,8 +250,6 @@ import RedTriCollarForehead from './assets/puppies/red-tri-collar-forehead.jpg';
 import RedTriStripe from './assets/puppies/red-tri-stripe.jpg';
 import RedTriDot from './assets/puppies/red-tri-dot.jpg';
 import RedTriPartialCollar from './assets/puppies/red-tri-partial-collar.jpg';
-
-Vue.use(VueConfetti);
 
 export default {
   name: 'App',
