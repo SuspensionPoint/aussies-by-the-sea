@@ -215,7 +215,7 @@
                   <v-card-title
                     class="justify-center font-weight-black text-uppercase"
                   >Phone</v-card-title>
-                  <v-card-text class="text-center">850-313-1092</v-card-text>
+                  <v-card-text class="text-center">850-592-8010 or 850-313-1092</v-card-text>
                 </v-card>
               </v-col>
 
