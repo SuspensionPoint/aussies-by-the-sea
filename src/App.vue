@@ -106,6 +106,7 @@
                   class="mx-auto pa-3"
                   :color="spokenFor ? '#26c6da' : '#26c6da'"
                   dark
+                  max-width="400"
                 >
                   <div v-if="photos.length > 0" class="justify-center">
                     <v-img
