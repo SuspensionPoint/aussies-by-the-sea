@@ -137,7 +137,10 @@
                       Yes! This
                       <span v-if="sex === 'Male'">boy</span>
                       <span v-else>girl</span>
-                       found their forever home. 🎉
+                       found
+                      <span v-if="sex === 'Male'">his</span>
+                      <span v-else>her</span>
+                       forever home. 🎉
                     </span>
                     <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
                   </h4>
