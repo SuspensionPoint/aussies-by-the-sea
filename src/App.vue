@@ -423,6 +423,6 @@ export default {
    color: #26c6da;
  }
 
-  #canvas-wrap { position:relative; width:300px; height:500px }
+  #canvas-wrap { position:relative; width:100%; height:100%; }
   #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:0 }
 </style>
