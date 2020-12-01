@@ -414,7 +414,7 @@ export default {
     start(index) {
       this.$confetti.start({
         canvasId: index,
-        particlesPerFrame: 5,
+        particlesPerFrame: 1,
       });
     },
   },
