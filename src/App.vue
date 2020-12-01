@@ -400,6 +400,11 @@ export default {
     this.$nextTick(() => {
       this.puppies.forEach((puppy) => {
         if (puppy.spokenFor) {
+          const canvas = document.getElementById(puppy.name);
+          canvas.style.width = '100%';
+          canvas.style.height = '100%';
+          canvas.width = canvas.offsetWidth;
+          canvas.height = canvas.offsetHeight;
           this.start(puppy.name);
         }
       });
