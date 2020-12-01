@@ -106,7 +106,7 @@
                   class="mx-auto pa-3"
                   :color="spokenFor ? '#26c6da' : '#26c6da'"
                   dark
-                  max-width="300"
+                  max-width="400"
                 >
                   <div v-if="photos.length > 0" class="justify-center">
                     <v-img
@@ -400,8 +400,8 @@ export default {
       this.puppies.forEach((puppy) => {
         if (puppy.spokenFor) {
           const canvas = document.getElementById(puppy.name);
-          canvas.style.width = '100%';
-          canvas.style.height = '100%';
+          canvas.style.width = '90%';
+          canvas.style.height = '90%';
           canvas.width = canvas.offsetWidth;
           canvas.height = canvas.offsetHeight;
           this.start(puppy.name);
