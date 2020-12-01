@@ -106,8 +106,8 @@
                     class="mx-auto pa-3"
                     :color="spokenFor ? '#26c6da' : '#26c6da'"
                     dark
-                    height="495"
-                    width="395"
+                    height="500"
+                    width="400"
                   >
                     <div id="canvas-wrap">
                       <canvas :id="name"></canvas>
@@ -423,6 +423,6 @@ export default {
    color: #26c6da;
  }
 
-  #canvas-wrap { position:relative; width:100%; height:100%; }
-  #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:0 }
+  #canvas-wrap { position:relative; width:400px; height:500px; }
+  #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:99; }
 </style>
