@@ -107,8 +107,8 @@
                     class="mx-auto pa-3"
                     :color="spokenFor ? '#26c6da' : '#26c6da'"
                     dark
-                    height="600"
-                    width="400"
+                    height="495"
+                    width="395"
                   >
                     <div v-if="photos.length > 0" class="justify-center">
                       <v-img
@@ -420,6 +420,6 @@ export default {
    color: #26c6da;
  }
 
-  #canvas-wrap { position:relative; width:400px; height:600px }
+  #canvas-wrap { position:relative; width:300px; height:500px }
   #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:0 }
 </style>
