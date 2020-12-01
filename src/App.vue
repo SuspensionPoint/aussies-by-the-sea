@@ -100,9 +100,9 @@
               cols="12"
               md="4"
             >
-              <div id="container">
+              <div id="canvas-wrap">
                 <canvas :id="name"></canvas>
-                <div id="overlay">
+                <div>
                   <v-card
                     class="mx-auto pa-3"
                     :color="spokenFor ? '#26c6da' : '#26c6da'"
@@ -419,15 +419,6 @@ export default {
    color: #26c6da;
  }
 
-  #container {
-    position: relative;
-  }
-
-  #container canvas, #overlay {
-    position: absolute;
-  }
-
-  canvas {
-    border: 1px solid black;
-  }
+  #canvas-wrap { position:relative; width:800px; height:600px }
+  #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:0 }
 </style>
