@@ -12,6 +12,13 @@
         </v-row>
       </section>
 
+      <canvas
+        id="test"
+        width="500"
+        height="200"
+        style="border:1px solid #000000;"
+      />
+
       <section id="about-me">
         <div class="py-12"></div>
 
@@ -100,7 +107,7 @@
               cols="12"
               md="4"
             >
-              <!-- <Confetti v-if="spokenFor">
+              <canvas :id="name">
                 <v-card
                   class="mx-auto pa-3"
                   :color="spokenFor ? '#26c6da' : '#26c6da'"
@@ -156,65 +163,7 @@
                     </h4>
                   </div>
                 </v-card>
-              </Confetti> -->
-
-              <Confetti>
-                <v-card
-                  class="mx-auto pa-3"
-                  :color="spokenFor ? '#26c6da' : '#26c6da'"
-                  dark
-                  max-width="400"
-                >
-                  <div v-if="photos.length > 0" class="justify-center">
-                    <v-img
-                      :src="photos[0]"
-                    >
-                    </v-img>
-                  </div>
-
-                  <v-card-title class="justify-center">
-                    <v-icon
-                      large
-                      left
-                      v-text="icon"
-                    >
-                    </v-icon>
-                    <h2 class="title font-weight-bold" v-text="name"></h2>
-                  </v-card-title>
-
-                  <div class="text-start">
-                    <h4>Sex: <span class="font-weight-light" v-text="sex"></span> </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>Coat: <span class="font-weight-light" v-text="coat"></span> </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>Spoken For?:
-                      <span v-if="spokenFor" class="font-weight-light">
-                        Yes! This
-                        <span v-if="sex === 'Male'">boy</span>
-                        <span v-else>girl</span>
-                        found
-                        <span v-if="sex === 'Male'">his</span>
-                        <span v-else>her</span>
-                        forever home. 🎉
-                      </span>
-                      <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
-                    </h4>
-                  </div>
-
-                  <div class="text-start">
-                    <h4>
-                      Current Weight:
-                      <span class="font-weight-light"
-                        v-text="`${weights[weights.length-1].weight} oz`">
-                      </span>
-                    </h4>
-                  </div>
-                </v-card>
-              </Confetti>
+              </canvas>
             </v-col>
           </v-row>
 
@@ -452,30 +401,17 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.puppies.forEach((puppy) => {
+      if (puppy.spokenFor) {
+        this.start(puppy.name);
+      }
+    });
+  },
   methods: {
-    start() {
-      this.$confetti.start();
-    },
-
-    stop() {
-      this.$confetti.stop();
-    },
-
-    love() {
-      this.$confetti.update({
-        particles: [
-          {
-            type: 'heart',
-          },
-          {
-            type: 'circle',
-          },
-        ],
-        defaultColors: [
-          'red',
-          'pink',
-          '#ba0000',
-        ],
+    start(index) {
+      this.$confetti.start({
+        canvasId: index,
       });
     },
   },
