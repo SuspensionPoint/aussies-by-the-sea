@@ -155,11 +155,19 @@
             </v-col>
           </v-row>
 
-          <v-img
+          <v-parallax
+            class="d-none d-lg-block"
             :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
             :src="require('./assets/puppies/momma-and-pups.jpg')"
           >
-          </v-img>
+          </v-parallax>
+
+          <v-row no-gutters class="d-lg-none">
+            <v-img
+              :src="require('./assets/puppies/momma-and-pups.jpg')"
+            >
+            </v-img>
+          </v-row>
         </v-container>
 
         <div class="py-12"></div>
