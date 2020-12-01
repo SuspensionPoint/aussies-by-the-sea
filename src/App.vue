@@ -99,13 +99,14 @@
               :key="i"
               cols="12"
               md="4"
-            >
+            >npm
               <v-card
                 class="mx-auto pa-3"
-                color="#26c6da"
+                :color="spokenFor ? '#26c6da' : '#26c6da'"
                 dark
                 max-width="400"
               >
+                <Confetti v-if="spokenFor"></Confetti>
                 <div v-if="photos.length > 0" class="justify-center">
                   <v-img
                     :src="photos[0]"
@@ -242,6 +243,8 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import VueConfetti from 'vue-confetti';
 import * as moment from 'moment/moment';
 import MerleMale from './assets/puppies/merle-male.jpg';
 import MerleFemale from './assets/puppies/merle-female.jpg';
@@ -250,6 +253,8 @@ import RedTriCollarForehead from './assets/puppies/red-tri-collar-forehead.jpg';
 import RedTriStripe from './assets/puppies/red-tri-stripe.jpg';
 import RedTriDot from './assets/puppies/red-tri-dot.jpg';
 import RedTriPartialCollar from './assets/puppies/red-tri-partial-collar.jpg';
+
+Vue.use(VueConfetti);
 
 export default {
   name: 'App',
@@ -263,7 +268,7 @@ export default {
           name: 'Mashed Potatoes',
           coat: 'Red Merle',
           sex: 'Male',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -387,6 +392,33 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    start() {
+      this.$confetti.start();
+    },
+
+    stop() {
+      this.$confetti.stop();
+    },
+
+    love() {
+      this.$confetti.update({
+        particles: [
+          {
+            type: 'heart',
+          },
+          {
+            type: 'circle',
+          },
+        ],
+        defaultColors: [
+          'red',
+          'pink',
+          '#ba0000',
+        ],
+      });
+    },
   },
 };
 </script>
