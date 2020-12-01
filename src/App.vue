@@ -106,7 +106,7 @@
                   class="mx-auto pa-3"
                   :color="spokenFor ? '#26c6da' : '#26c6da'"
                   dark
-                  max-width="400"
+                  max-width="375"
                 >
                   <div v-if="photos.length > 0" class="justify-center">
                     <v-img
@@ -400,8 +400,8 @@ export default {
       this.puppies.forEach((puppy) => {
         if (puppy.spokenFor) {
           const canvas = document.getElementById(puppy.name);
-          canvas.style.width = '90%';
-          canvas.style.height = '90%';
+          canvas.style.width = '97%';
+          canvas.style.height = '97%';
           canvas.width = canvas.offsetWidth;
           canvas.height = canvas.offsetHeight;
           this.start(puppy.name);
@@ -425,6 +425,6 @@ export default {
    color: #26c6da;
  }
 
-  #canvas-wrap { position:relative; width:400px; height:500px; }
+  #canvas-wrap { position:relative; }
   #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:99; }
 </style>
