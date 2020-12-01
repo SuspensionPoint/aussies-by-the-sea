@@ -133,7 +133,12 @@
 
                 <div class="text-start">
                   <h4>Spoken For?:
-                    <span v-if="spokenFor" class="font-weight-light">Yes!</span>
+                    <span v-if="spokenFor" class="font-weight-light">
+                      Yes! This
+                      <span v-if="sex === 'Male'">boy</span>
+                      <span v-else>girl</span>
+                       found their forever home. 🎉
+                    </span>
                     <span v-else class="font-weight-light">Not yet! Contact us below if you're interested. 😊</span>
                   </h4>
                 </div>
@@ -302,7 +307,7 @@ export default {
           name: 'Hazel',
           coat: 'Red Tri w/ Thin Full Collar',
           sex: 'Female',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
