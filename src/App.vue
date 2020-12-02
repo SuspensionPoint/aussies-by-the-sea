@@ -484,10 +484,10 @@ export default {
   },
   mounted() {
     this.puppies.forEach((puppy) => {
-        if (puppy.spokenFor) {
-          this.start(puppy.name);
-        }
-      });
+      if (puppy.spokenFor) {
+        this.start(puppy.name);
+      }
+    });
 
     this.$nextTick(() => {
       this.puppies.forEach((puppy) => {
