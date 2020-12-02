@@ -283,6 +283,18 @@ export default {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 16.5,
             },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 18.8,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 21.3,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 23.84,
+            },
           ],
           photos: [MerleMale],
         },
@@ -301,6 +313,18 @@ export default {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 12.7,
             },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 14.8,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 17.5,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 19.7,
+            },
           ],
           photos: [MerleFemale],
         },
@@ -318,6 +342,18 @@ export default {
             {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 15,
+            },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 17.14,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 19.89,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 22.3,
             },
           ],
           weight: [13.97, 15],
@@ -338,6 +374,18 @@ export default {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 13.76,
             },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 16.58,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 19.05,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 21.35,
+            },
           ],
           photos: [RedTriCollarSmall],
         },
@@ -355,6 +403,18 @@ export default {
             {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 14,
+            },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 16.58,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 18.98,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 21.05,
             },
           ],
           photos: [RedTriPartialCollar],
@@ -374,6 +434,18 @@ export default {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 12.84,
             },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 15.10,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 17.71,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 19.65,
+            },
           ],
           photos: [RedTriDot],
         },
@@ -391,6 +463,18 @@ export default {
             {
               date: moment('2020-11-27T11:30:00Z').toDate(),
               weight: 11.7,
+            },
+            {
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 14.14,
+            },
+            {
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 16.52,
+            },
+            {
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 18.2,
             },
           ],
           photos: [RedTriStripe],
