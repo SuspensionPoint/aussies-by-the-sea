@@ -29,11 +29,21 @@
           >
             Australian Shepherd breeder located in Navarre, Fl.
             <br>
+            <br>
+
             <!-- eslint-disable max-len -->
             On Thanksgiving Day, Nov. 26th, 2020, our female Australian Shepherd gave birth to her first litter.
             She had 7 very healthy puppies!
 
-            There are currently 6/7 spoken for.
+            <br>
+            <br>
+
+            There are currently {{this.available}}/7 available.
+
+            <br>
+            <br>
+
+            {{this.numMale}} males and {{this.numFemale}} females!
 
             Check back often to see their progress!
           </v-responsive>
@@ -70,7 +80,7 @@
         <v-parallax
           contain
           class="d-none d-lg-block"
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 900"
+          :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
           :src="require('./assets/mars.jpeg')"
         >
         </v-parallax>
@@ -161,14 +171,7 @@
             </v-col>
           </v-row>
 
-          <v-parallax
-            class="d-none d-lg-block"
-            :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
-            :src="require('./assets/puppies/momma-and-pups.jpg')"
-          >
-          </v-parallax>
-
-          <v-row no-gutters class="d-lg-none">
+          <v-row no-gutters>
             <v-img
               :src="require('./assets/puppies/momma-and-pups.jpg')"
             >
@@ -270,7 +273,7 @@ export default {
           name: 'Mashed Potatoes',
           coat: 'Red Merle',
           sex: 'Male',
-          spokenFor: true,
+          spokenFor: false,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -415,13 +418,29 @@ export default {
         particles: [
           {
             type: 'heart',
-            size: 8,
+            size: 10,
             dropRate: 4,
+          },
+          {
+            type: 'rect',
+            size: 3,
+            dropRate: 2,
           },
         ],
         canvasId: index,
         particlesPerFrame: 1,
       });
+    },
+  },
+  computed: {
+    available() {
+      return this.puppies.filter((puppy) => !puppy.spokenFor).length;
+    },
+    numMale() {
+      return this.puppies.filter((puppy) => puppy.sex === 'Male').length;
+    },
+    numFemale() {
+      return this.puppies.filter((puppy) => puppy.sex === 'Female').length;
     },
   },
 };
