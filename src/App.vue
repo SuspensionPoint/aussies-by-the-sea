@@ -303,7 +303,7 @@ export default {
           name: 'Coquito',
           coat: 'Red Merle',
           sex: 'Female',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
