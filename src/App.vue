@@ -412,6 +412,13 @@ export default {
   methods: {
     start(index) {
       this.$confetti.start({
+        particles: [
+          {
+            type: 'heart',
+            size: 8,
+            dropRate: 4,
+          },
+        ],
         canvasId: index,
         particlesPerFrame: 1,
       });
