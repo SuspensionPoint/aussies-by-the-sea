@@ -110,8 +110,8 @@
               cols="12"
               md="4"
             >
-              <div id="canvas-wrap">
-                <canvas :id="name"></canvas>
+              <div class="canvas-wrap">
+                <canvas class="canvas-wrap-canvas" :id="name"></canvas>
                 <v-card
                   class="mx-auto pa-3"
                   :color="spokenFor ? '#26c6da' : '#26c6da'"
@@ -541,6 +541,6 @@ export default {
    color: #26c6da;
  }
 
-  #canvas-wrap { position:relative; }
-  #canvas-wrap canvas { position:absolute; top:0; left:0; z-index:99; }
+  .canvas-wrap { position:relative; }
+  .canvas-wrap-canvas { position:absolute; top:0; left:0; z-index:99; }
 </style>
