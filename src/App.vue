@@ -273,7 +273,7 @@ export default {
           name: 'Mashed Potatoes',
           coat: 'Red Merle',
           sex: 'Male',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -394,7 +394,7 @@ export default {
           name: 'Ham',
           coat: 'Red Tri w/ Partial Collar',
           sex: 'Male',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
@@ -454,7 +454,7 @@ export default {
           name: 'Biscuit',
           coat: 'Red Tri w/ Long Neck Stripe',
           sex: 'Female',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
