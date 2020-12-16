@@ -333,7 +333,7 @@ export default {
           name: 'Wishbone',
           coat: 'Red Tri w/ Full Collar & White Forehead',
           sex: 'Male',
-          spokenFor: false,
+          spokenFor: true,
           weights: [
             {
               date: moment('2020-11-26T20:00:00Z').toDate(),
