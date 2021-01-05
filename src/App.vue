@@ -243,261 +243,262 @@
 </template>
 
 <script>
-import Vue from "vue";
-import VueConfetti from "vue-confetti";
-import * as moment from "moment/moment";
-import MerleMale from "./assets/puppies/merle-male.jpg";
-import RedTriCollarSmall from "./assets/puppies/red-tri-collar-small.jpg";
-import RedTriCollarForehead from "./assets/puppies/red-tri-collar-forehead.jpg";
-import RedTriStripe from "./assets/puppies/red-tri-stripe.jpg";
-import RedTriDot from "./assets/puppies/red-tri-dot.jpg";
-import RedTriPartialCollar from "./assets/puppies/red-tri-partial-collar.jpg";
+import Vue from 'vue';
+import VueConfetti from 'vue-confetti';
+import * as moment from 'moment/moment';
+import MerleMale from './assets/puppies/merle-male.jpg';
+import RedTriCollarSmall from './assets/puppies/red-tri-collar-small.jpg';
+import RedTriCollarForehead from './assets/puppies/red-tri-collar-forehead.jpg';
+import RedTriStripe from './assets/puppies/red-tri-stripe.jpg';
+import RedTriDot from './assets/puppies/red-tri-dot.jpg';
+import RedTriPartialCollar from './assets/puppies/red-tri-partial-collar.jpg';
 
-const path = require('path'); 
-path.join(__dirname, './src/assets')
+const path = require('path');
+
+path.join(__dirname, './src/assets');
 
 const CoquitoPhotos = require.context(
   path.join(__dirname, './src/assets'),
   true,
-  /^.*\.jpg$/
-)
+  /^.*\.jpg$/,
+);
 
 Vue.use(VueConfetti);
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {},
   data() {
     return {
       puppies: [
         {
-          icon: "mdi-dog",
-          name: "Mashed Potatoes",
-          coat: "Red Merle",
-          sex: "Male",
+          icon: 'mdi-dog',
+          name: 'Mashed Potatoes',
+          coat: 'Red Merle',
+          sex: 'Male',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 15.7
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 15.7,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 16.5
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 16.5,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 18.8
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 18.8,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 21.3
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 21.3,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 23.84
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 23.84,
+            },
           ],
-          photos: [MerleMale]
+          photos: [MerleMale],
         },
         {
-          icon: "mdi-dog",
-          name: "Coquito",
-          coat: "Red Merle",
-          sex: "Female",
+          icon: 'mdi-dog',
+          name: 'Coquito',
+          coat: 'Red Merle',
+          sex: 'Female',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 12.7
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 12.7,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 12.7
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 12.7,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 14.8
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 14.8,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 17.5
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 17.5,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 19.7
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 19.7,
+            },
           ],
-          photos: []
+          photos: CoquitoPhotos,
         },
         {
-          icon: "mdi-dog",
-          name: "Wishbone",
-          coat: "Red Tri w/ Full Collar & White Forehead",
-          sex: "Male",
+          icon: 'mdi-dog',
+          name: 'Wishbone',
+          coat: 'Red Tri w/ Full Collar & White Forehead',
+          sex: 'Male',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 13.97
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.97,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 15
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 15,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 17.14
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 17.14,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 19.89
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 19.89,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 22.3
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 22.3,
+            },
           ],
           weight: [13.97, 15],
-          photos: [RedTriCollarForehead]
+          photos: [RedTriCollarForehead],
         },
         {
-          icon: "mdi-dog",
-          name: "Hazel",
-          coat: "Red Tri w/ Thin Full Collar",
-          sex: "Female",
+          icon: 'mdi-dog',
+          name: 'Hazel',
+          coat: 'Red Tri w/ Thin Full Collar',
+          sex: 'Female',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 13.9
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.9,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 13.76
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 13.76,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 16.58
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 16.58,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 19.05
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 19.05,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 21.35
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 21.35,
+            },
           ],
-          photos: [RedTriCollarSmall]
+          photos: [RedTriCollarSmall],
         },
         {
-          icon: "mdi-dog",
-          name: "Ham",
-          coat: "Red Tri w/ Partial Collar",
-          sex: "Male",
+          icon: 'mdi-dog',
+          name: 'Ham',
+          coat: 'Red Tri w/ Partial Collar',
+          sex: 'Male',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 13.62
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 13.62,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 14
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 14,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 16.58
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 16.58,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 18.98
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 18.98,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 21.05
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 21.05,
+            },
           ],
-          photos: [RedTriPartialCollar]
+          photos: [RedTriPartialCollar],
         },
         {
-          icon: "mdi-dog",
-          name: "Gravy",
-          coat: "Red Tri w/ neck dot",
-          sex: "Female",
+          icon: 'mdi-dog',
+          name: 'Gravy',
+          coat: 'Red Tri w/ neck dot',
+          sex: 'Female',
           spokenFor: false,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 12.84
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 12.84,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 12.84
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 12.84,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 15.1
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 15.1,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 17.71
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 17.71,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 19.65
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 19.65,
+            },
           ],
-          photos: [RedTriDot]
+          photos: [RedTriDot],
         },
         {
-          icon: "mdi-dog",
-          name: "Biscuit",
-          coat: "Red Tri w/ Long Neck Stripe",
-          sex: "Female",
+          icon: 'mdi-dog',
+          name: 'Biscuit',
+          coat: 'Red Tri w/ Long Neck Stripe',
+          sex: 'Female',
           spokenFor: true,
           weights: [
             {
-              date: moment("2020-11-26T20:00:00Z").toDate(),
-              weight: 11.2
+              date: moment('2020-11-26T20:00:00Z').toDate(),
+              weight: 11.2,
             },
             {
-              date: moment("2020-11-27T11:30:00Z").toDate(),
-              weight: 11.7
+              date: moment('2020-11-27T11:30:00Z').toDate(),
+              weight: 11.7,
             },
             {
-              date: moment("2020-11-28T15:30:00Z").toDate(),
-              weight: 14.14
+              date: moment('2020-11-28T15:30:00Z').toDate(),
+              weight: 14.14,
             },
             {
-              date: moment("2020-11-29T13:00:00Z").toDate(),
-              weight: 16.52
+              date: moment('2020-11-29T13:00:00Z').toDate(),
+              weight: 16.52,
             },
             {
-              date: moment("2020-12-01T14:30:00Z").toDate(),
-              weight: 18.2
-            }
+              date: moment('2020-12-01T14:30:00Z').toDate(),
+              weight: 18.2,
+            },
           ],
-          photos: [RedTriStripe]
-        }
-      ]
+          photos: [RedTriStripe],
+        },
+      ],
     };
   },
   mounted() {
-    this.puppies.forEach(puppy => {
+    this.puppies.forEach((puppy) => {
       if (puppy.spokenFor) {
         this.start(puppy.name);
       }
     });
 
     this.$nextTick(() => {
-      this.puppies.forEach(puppy => {
+      this.puppies.forEach((puppy) => {
         if (puppy.spokenFor) {
           const canvas = document.getElementById(puppy.name);
-          canvas.style.width = "100%";
-          canvas.style.height = "100%";
+          canvas.style.width = '100%';
+          canvas.style.height = '100%';
           canvas.width = canvas.offsetWidth;
           canvas.height = canvas.offsetHeight;
           this.start(puppy.name);
@@ -510,32 +511,32 @@ export default {
       this.$confetti.start({
         particles: [
           {
-            type: "heart",
+            type: 'heart',
             size: 10,
-            dropRate: 4
+            dropRate: 4,
           },
           {
-            type: "rect",
+            type: 'rect',
             size: 3,
-            dropRate: 2
-          }
+            dropRate: 2,
+          },
         ],
         canvasId: index,
-        particlesPerFrame: 1
+        particlesPerFrame: 1,
       });
-    }
+    },
   },
   computed: {
     available() {
-      return this.puppies.filter(puppy => !puppy.spokenFor).length;
+      return this.puppies.filter((puppy) => !puppy.spokenFor).length;
     },
     numMale() {
-      return this.puppies.filter(puppy => puppy.sex === "Male").length;
+      return this.puppies.filter((puppy) => puppy.sex === 'Male').length;
     },
     numFemale() {
-      return this.puppies.filter(puppy => puppy.sex === "Female").length;
-    }
-  }
+      return this.puppies.filter((puppy) => puppy.sex === 'Female').length;
+    },
+  },
 };
 </script>
 
