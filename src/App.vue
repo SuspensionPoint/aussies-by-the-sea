@@ -247,7 +247,6 @@ import Vue from "vue";
 import VueConfetti from "vue-confetti";
 import * as moment from "moment/moment";
 import MerleMale from "./assets/puppies/merle-male.jpg";
-import MerleFemale from "./assets/puppies/merle-female.jpg";
 import RedTriCollarSmall from "./assets/puppies/red-tri-collar-small.jpg";
 import RedTriCollarForehead from "./assets/puppies/red-tri-collar-forehead.jpg";
 import RedTriStripe from "./assets/puppies/red-tri-stripe.jpg";
@@ -330,7 +329,7 @@ export default {
               weight: 19.7
             }
           ],
-          photos: CoquitoPhotos
+          photos: []
         },
         {
           icon: "mdi-dog",
