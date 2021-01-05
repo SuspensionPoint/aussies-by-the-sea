@@ -253,15 +253,30 @@ import RedTriStripe from './assets/puppies/red-tri-stripe.jpg';
 import RedTriDot from './assets/puppies/red-tri-dot.jpg';
 import RedTriPartialCollar from './assets/puppies/red-tri-partial-collar.jpg';
 
-const path = require('path');
-
-path.join(__dirname, './src/assets');
-
-const CoquitoPhotos = require.context(
-  path.join(__dirname, './src/assets'),
-  true,
-  /^.*\.jpg$/,
-);
+import Coquito1 from './assets/puppies/Coquito/image1.jpg';
+import Coquito2 from './assets/puppies/Coquito/image2.jpg';
+import Coquito3 from './assets/puppies/Coquito/image3.jpg';
+import Coquito4 from './assets/puppies/Coquito/image4.jpg';
+import Coquito5 from './assets/puppies/Coquito/image5.jpg';
+import Coquito6 from './assets/puppies/Coquito/image6.jpg';
+import Coquito7 from './assets/puppies/Coquito/image7.jpg';
+import Coquito8 from './assets/puppies/Coquito/image8.jpg';
+import Coquito9 from './assets/puppies/Coquito/image9.jpg';
+import Coquito10 from './assets/puppies/Coquito/image10.jpg';
+import Coquito11 from './assets/puppies/Coquito/image11.jpg';
+import Coquito12 from './assets/puppies/Coquito/image12.jpg';
+import Coquito13 from './assets/puppies/Coquito/image13.jpg';
+import Coquito14 from './assets/puppies/Coquito/image14.jpg';
+import Coquito15 from './assets/puppies/Coquito/image15.jpg';
+import Coquito16 from './assets/puppies/Coquito/image16.jpg';
+import Coquito17 from './assets/puppies/Coquito/image17.jpg';
+import Coquito18 from './assets/puppies/Coquito/image18.jpg';
+import Coquito19 from './assets/puppies/Coquito/image19.jpg';
+import Coquito20 from './assets/puppies/Coquito/image20.jpg';
+import Coquito21 from './assets/puppies/Coquito/image21.jpg';
+import Coquito22 from './assets/puppies/Coquito/image22.jpg';
+import Coquito23 from './assets/puppies/Coquito/image23.jpg';
+import Coquito24 from './assets/puppies/Coquito/image24.jpg';
 
 Vue.use(VueConfetti);
 
@@ -330,7 +345,32 @@ export default {
               weight: 19.7,
             },
           ],
-          photos: CoquitoPhotos,
+          photos: [
+            Coquito1,
+            Coquito2,
+            Coquito3,
+            Coquito4,
+            Coquito5,
+            Coquito6,
+            Coquito7,
+            Coquito8,
+            Coquito9,
+            Coquito10,
+            Coquito11,
+            Coquito12,
+            Coquito13,
+            Coquito14,
+            Coquito15,
+            Coquito16,
+            Coquito17,
+            Coquito18,
+            Coquito19,
+            Coquito20,
+            Coquito21,
+            Coquito22,
+            Coquito23,
+            Coquito24,
+          ],
         },
         {
           icon: 'mdi-dog',
