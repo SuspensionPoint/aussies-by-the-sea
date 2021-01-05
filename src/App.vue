@@ -254,6 +254,15 @@ import RedTriStripe from "./assets/puppies/red-tri-stripe.jpg";
 import RedTriDot from "./assets/puppies/red-tri-dot.jpg";
 import RedTriPartialCollar from "./assets/puppies/red-tri-partial-collar.jpg";
 
+const path = require('path'); 
+path.join(__dirname, './src/assets')
+
+const CoquitoPhotos = require.context(
+  path.join(__dirname, './src/assets'),
+  true,
+  /^.*\.jpg$/
+)
+
 Vue.use(VueConfetti);
 
 export default {
@@ -321,7 +330,7 @@ export default {
               weight: 19.7
             }
           ],
-          photos: [MerleFemale]
+          photos: CoquitoPhotos
         },
         {
           icon: "mdi-dog",
